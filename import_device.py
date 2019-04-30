@@ -82,8 +82,8 @@ def ajouter_device_a_partner(str, device):
         a = check_partner(str)
         partner.write(a, {'device_ids': device}) 
         
-with open('./csvtest.csv', newline='') as csvfile:
-    spamreader = csv.reader(csvfile, delimiter=';', quotechar='|')
+with open('./test.csv', newline='') as fichier_csv:
+    spamreader = csv.reader(fichier_csv, delimiter=';', quotechar='|')
     
     for row in spamreader:                   
         check_brands(row[5])                 
